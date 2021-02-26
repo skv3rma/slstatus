@@ -73,7 +73,8 @@ static const struct arg args[] = {
     { datetime, "   %s | ","%a %b %d %r" },
     { battery_state, "   %2s [","BAT0" },
     { battery_perc, "%s% ] | ","BAT0" },
+    { run_command, " [ %2s  ", "sensors | awk '/Core 0/ {print $3}'" },
+    { run_command, "| %2s ]", "sensors | awk '/Core 1/ {print $3}'" },
     /* run command executes the provided script and prints the output */
     { run_command, " %4s ", "if [ -f '/tmp/recordingicon' ]; then cat /tmp/recordingicon; else echo ' 雷'; fi | awk '{print $1} ' " },
-    /* { temp, "%s% ] ",NULL }, */
 };
