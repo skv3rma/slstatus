@@ -66,13 +66,13 @@ static const struct arg args[] = {
 	/*  */
     { netspeed_rx, "    %sB/s | ", "wlp3s0" },
     { wifi_essid, "%s | ", "wlp3s0" },
-    { run_command, " %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-    { cpu_perc, "   %s%% | ", NULL	      },
-    { ram_perc, "     %s%% | ", NULL	      },
+    { run_command, "  %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+    { cpu_perc, "  %s%% | ", NULL	      },
+    { ram_perc, "  %s%% | ", NULL	      },
     /* { datetime, "  %s | ","%a %b %d " }, */
     { datetime, "   %s | ","%a %b %d %r" },
     { battery_state, "    %s [","BAT0" },
     { battery_perc, "%s% ] | ","BAT0" },
-    { run_command, "📷 %4s ", "cat /tmp/recordingicon | awk '{print $1}'" },
+    { run_command, "%4s ", "cat /tmp/recordingicon | awk '{print $1}'" },
     /* { temp, "%s% ] ",NULL }, */
 };
