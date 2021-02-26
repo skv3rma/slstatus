@@ -73,6 +73,6 @@ static const struct arg args[] = {
     { datetime, "   %s | ","%a %b %d %r" },
     { battery_state, "    %s [","BAT0" },
     { battery_perc, "%s% ] | ","BAT0" },
-    { run_command, "%4s ", "cat /tmp/recordingicon | awk '{print $1}'" },
+    { run_command, "%4s ", "cat /tmp/recordingicon | awk '{print $1}' " },
     /* { temp, "%s% ] ",NULL }, */
 };
