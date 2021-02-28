@@ -50,8 +50,8 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",    "+" },
-			{ "Discharging", "-" },
+			{ "Charging",    " " },
+			{ "Discharging", " " },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -174,7 +174,7 @@
                         } else {
                                 /* perc < 30 */
                                 return bprintf("\uf585 %2d%%", perc);
-                        }                
+                        }
                 } else if (!strcmp(symbol, "-")) {
                         /* is discharging */
                         if (perc == 100) {
@@ -198,7 +198,7 @@
                         } else {
                                 /* perc < 20 */
                                 return bprintf("\uf579 %2d%%", perc);
-                        }                
+                        }
                 } else {
                         /* unknown */
                         return bprintf("\uf582 ?");
