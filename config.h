@@ -67,7 +67,7 @@ static const struct arg args[] = {
     { netspeed_rx, "    [  %sB/s | ", "wlp3s0" },
     { netspeed_tx, "   %sB/s ] [ ", "wlp3s0" },
     { wifi_essid, "%s ] [ ", "wlp3s0" },
-    { run_command, "  %4s ] [ ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+    { disk_free, " %4s ] [ ", "/home" },
     { cpu_perc, "  %2s%% ] [ ", NULL	      },
     { ram_perc, "  %2s%% ", NULL	      },
     { ram_used, "| %2s% ] [ ", NULL	      },
@@ -76,8 +76,9 @@ static const struct arg args[] = {
     { run_command, "| %2s ] [  ", "sensors | awk '/Core 1/ {print $3}'" },
     /* run command executes the provided script and prints the output */
     /* { run_command, " %4s | ", "weather" }, */
-    { battery_state, " %2s ","BAT0" },
-    { battery_perc, "%s% ] [ ","BAT0" },
     { datetime, "   %s ] [ ","%a %b %d %r" },
+    { run_command, "  %4s ] [ ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+    { battery_state, "%2s ","BAT0" },
+    { battery_perc, "%s% ] [ ","BAT0" },
     { run_command, "%4s  ]", "if [ -f '/tmp/recordingicon' ]; then cat /tmp/recordingicon; else echo ' 雷'; fi | awk '{print $1} ' " },
 };
