@@ -67,6 +67,12 @@ static const struct arg args[] = {
     { netspeed_rx, "    [  %sB/s | ", "wlp3s0" },
     { netspeed_tx, "   %sB/s ] [ ", "wlp3s0" },
     { wifi_essid, "%s ] [ ", "wlp3s0" },
+    /*
+    *
+    { netspeed_rx, "    [  %sB/s | ", "enp2s0" },
+    { netspeed_tx, "   %sB/s ] [ ", "enp2s0" },
+    */
+
     { disk_free, " %4s ] [ ", "/home" },
     { cpu_perc, "  %2s%% ] [ ", NULL	      },
     { ram_perc, "  %2s%% ", NULL	      },
